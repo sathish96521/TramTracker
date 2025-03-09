@@ -1,0 +1,25 @@
+.container {
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f4f4f4;
+}
+
+.warning {
+  color: red;
+  font-weight: bold;
+}

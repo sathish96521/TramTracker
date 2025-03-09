@@ -1,0 +1,30 @@
+<div class="container">
+  <h2>Trams from Luma to Linde</h2>
+  <img
+    src="../../../assets/Images/tram-route.png"
+    alt="Tram Map"
+    style="max-width: 100%"
+  />
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Destination</th>
+        <th>Expected</th>
+        <th>Countdown</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let departure of departures">
+        <td>{{ departure.destination }}</td>
+        <td>{{ departure.display }}</td>
+        <td>{{ getTimeUntilDeparture(departure.expected) }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Stop Deviations</h3>
+  <div *ngFor="let deviation of deviations">
+    <p>{{ deviation.message }}</p>
+  </div>
+</div>
